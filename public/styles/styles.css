@@ -1,0 +1,23 @@
+.header{
+    border-bottom: 1px solid black !important ;
+   
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link{
+    font-size: 20px;
+}
+*{
+    font-size: 20px;
+}
+
+.add-container{
+    margin-top: 50px;
+    height: 100vh;
+}
+textarea{
+    height: 400px;
+}

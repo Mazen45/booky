@@ -7,5 +7,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "type": "commonjs"
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mazen45/booky.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Mazen45/booky/issues"
+  },
+  "homepage": "https://github.com/Mazen45/booky#readme"
 }
