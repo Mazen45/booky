@@ -1,10 +1,15 @@
-.header{
-    border-bottom: 1px solid black !important ;
+.borderbtm{
+    border-bottom: 1px solid rgb(111, 111, 111) !important ;
    
 }
 a{
     text-decoration: none;
     color: black;
+    font-weight: bold;
+    font-size: 30px;
+}
+li{
+    font-weight: bold;
 }
 
 .nav-link{
@@ -16,8 +21,41 @@ a{
 
 .add-container{
     margin-top: 50px;
-    height: 100vh;
+    height: 150vh;
 }
-textarea{
+.large{
     height: 400px;
+}
+label{
+    font-weight: bold;
+}
+.add-submit{
+    display: flex;
+    gap: 0px;
+    justify-content: center;
+}
+
+.custom-nav{
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+
+}
+
+.nav-title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0px;
+}
+
+.nav-right{
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+.card-title{
+    color: black;
+    font-weight: bold;
 }

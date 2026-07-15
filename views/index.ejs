@@ -1,21 +1,35 @@
 <%-include("partials/header.ejs")%>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-6 mt-5  align-items-center ">
+    <div class="col-md-5 mt-5 align-items-center">
+      <%if(books.length !== 0){%>
+      <%for(let book of books){%>
       <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0">
+        <div class="row g-0 justify-content-center ">
           <div class="col-md-4">
-            <img src="..." class="img-fluid rounded-start" alt="...">
+            <img src="<%=book.cover%>" class="img-fluid rounded-start" alt="<%=book.title%>">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-              <h5 class="card-title"><a href="">Card title</a></h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              <form action="/view-card" method="post">
+                <input type="hidden" value="" name="id">
+                <button type="submit" class="nav-link card-title">
+                  <%=book.title%>
+                </button>
+              </form>
+              <p class="card-text"><%=book.description%></p>
+              <p class="card-text"><small class="text-body-secondary">Last Modified: <%=book.note_date.toISOString().split('T')[0]%></small></p>
             </div>
           </div>
         </div>
       </div>
+      <%}%>
+      <%}else{%>
+      <div class="d-flex justify-content-center align-items-center">
+        <h2>No books yet.</h2>
+      </div>
+      <%}%>
+
     </div>
   </div>
 

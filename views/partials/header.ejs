@@ -11,25 +11,25 @@
 </head>
 
 <body>
-  <div class="container header">
+  <div class="container borderbtm mt-4">
     <header>
 
-
-      <div class="col-md-3 mb-2 mb-md-0"> <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none"> <svg class="bi" width="40" height="32" role="img" aria-label="Bootstrap">
-            <use xlink:href="#bootstrap"></use>
-          </svg> </a> </div>
-      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+      <ul class="nav col-12 col-md-auto mb-2 custom-nav mb-md-0 ">
+        <li class="nav-title">
+          <h2><a href="/" class="">Booky 🕮</a></h2>
+        </li>
         <li><a href="/add" class="nav-link px-2 link-dark mr-3">Add</a></li>
-        <li>
+        <li class="nav-right">
           <div class="dropdown">
             <a class="nav-link link-dark dropdown-toggle ml-6" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Sort by
             </a>
 
             <ul class="dropdown-menu ">
-              <li><a class="dropdown-item" href="#">Date</a></li>
-              <li><a class="dropdown-item" href="#">Rating</a></li>
-
+              <form action="/sort">
+                <li><button class="dropdown-item" type="submit">Date</button></li>
+                <li><button class="dropdown-item" href="#">Rating</button></li>
+              </form>
             </ul>
           </div>
         </li>

@@ -13,17 +13,34 @@
   <div class="container add-container">
     <div class="row justify-content-center">
       <div class="col-md-6 align-items-center">
+        <div class="borderbtm mb-4">
+          <h2>Add a new book</h2>
+        </div>
         <form action="/add" method="post">
 
-          <label for="book-name" class="mb-2">Book name</label>
-
+          <label for="name" class="mb-2">🕮 Book name</label>
           <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Username" id="book-name" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="book name" id="name" name="name" aria-label="book name" aria-describedby="basic-addon1">
+          </div>
+          <label for="isbn" class="mb-2">🕮 ISBN (optional)</label>
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="isbn" id="isbn" name="isbn" aria-label="book isbn">
+          </div>
+          <label for="description" class="mb-2">🕮 Book description</label>
+          <div class="input-group mb-3">
+            <textarea type="text" class="form-control normal" placeholder="description" id="description" name="description" aria-label="description"></textarea>
+          </div>
+          <label for="notes" class="mb-2">🕮 Your notes</label>
+          <div class="input-group">
+            <textarea class="form-control large" name="notes" aria-label="With textarea" placeholder="Add your book notes here..."></textarea>
           </div>
 
-          <label for="notes" class="mb-2">Your notes</label>
-          <div class="input-group">
-            <textarea class="form-control" aria-label="With textarea"></textarea>
+          <label for="rating" class="mt-3 mb-2">🕮 How strongly do you recommend this book out of 10?</label>
+          <div class="input-group ">
+            <input type="text" class="form-control" placeholder="Rating" name="rating" aria-label="Rating" aria-describedby="basic-addon1">
+          </div>
+          <div class="add-submit">
+            <button type="submit" class=" btn btn-dark mt-4 borderbtm">Add new book</button>
           </div>
         </form>
       </div>
