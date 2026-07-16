@@ -1,6 +1,10 @@
 .borderbtm{
     border-bottom: 1px solid rgb(111, 111, 111) !important ;
-   
+    
+    
+}
+html, body, main, header, footer{
+    background-color: #F9FAFB;
 }
 a{
     text-decoration: none;
@@ -13,10 +17,11 @@ li{
 }
 
 .nav-link{
-    font-size: 20px;
+    border-radius: 30%;
 }
 *{
-    font-size: 20px;
+    font-size: 25px;
+    font-family:  "Playfair Display", serif;
 }
 
 .add-container{
@@ -58,4 +63,37 @@ label{
 .card-title{
     color: black;
     font-weight: bold;
+}
+
+body{
+    height: 100vh;
+}
+
+.card{
+    background-color: #FFFFFF;
+}
+.btn{
+    background-color: #c24444;
+    color: white;
+    border: none;
+}
+.btn:hover{
+    background-color: #822121;
+}
+.form-control:focus{
+    border: none;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(241, 70, 70, 0.595) !important;
+}
+
+.dropdown-item:active{
+    background-color: #c24444;
+
+}
+.border-top{
+    border-top: 1px solid rgb(111, 111, 111) !important ;
+}
+
+.min-width{
+    min-width: 1000px;
 }

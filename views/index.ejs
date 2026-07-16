@@ -1,36 +1,36 @@
 <%-include("partials/header.ejs")%>
 <div class="container">
   <div class="row justify-content-center">
-    <div class="col-md-5 mt-5 align-items-center">
-      <%if(books.length !== 0){%>
-      <%for(let book of books){%>
-      <div class="card mb-3" style="max-width: 540px;">
-        <div class="row g-0 justify-content-center ">
-          <div class="col-md-4">
-            <img src="<%=book.cover%>" class="img-fluid rounded-start" alt="<%=book.title%>">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <form action="/view-card" method="post">
-                <input type="hidden" value="" name="id">
-                <button type="submit" class="nav-link card-title">
-                  <%=book.title%>
-                </button>
-              </form>
-              <p class="card-text"><%=book.description%></p>
-              <p class="card-text"><small class="text-body-secondary">Last Modified: <%=book.note_date.toISOString().split('T')[0]%></small></p>
-            </div>
+    <!-- <div class="col-md-5 mt-5 align-items-center"> -->
+    <%if(books.length !== 0){%>
+    <%for(let book of books){%>
+    <div class="card mb-3" style="max-width: 900px;margin-right: 30px;margin-top: 30px;padding-left: 0px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="<%=book.cover%>" class="img-fluid rounded-start" alt="<%=book.title%>">
+        </div>
+        <div class="col-md-8 ">
+          <div class="card-body">
+            <form action="/view/<%=book.id%>" method="post">
+              <input type="hidden" value="<%=book.id%>" name="id">
+              <button type="submit" class="nav-link card-title">
+                <%=book.title%>
+              </button>
+            </form>
+            <p class="card-text"><%=book.description%></p>
+            <p class="card-text"><small class="text-body-secondary">Last Modified: <%=book.note_date.toISOString().split('T')[0]%></small></p>
           </div>
         </div>
       </div>
-      <%}%>
-      <%}else{%>
-      <div class="d-flex justify-content-center align-items-center">
-        <h2>No books yet.</h2>
-      </div>
-      <%}%>
-
     </div>
+    <%}%>
+      <%}else{%>
+    <div class="d-flex justify-content-center align-items-center mt-4">
+      <h2>No books yet.</h2>
+    </div>
+    <%}%>
+
+    <!-- </div> -->
   </div>
 
 </div>

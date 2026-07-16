@@ -1,0 +1,37 @@
+<%-include("partials/header.ejs")%>
+<div class="container mt-4 w-50% min-width">
+  <div class="row justify-content-center">
+    <div class="col-md-3  align-items-center mb-3 " style="max-height: 450px; flex-shrink: 0;">
+      <img src="<%=book.cover%>" alt="<%=book.title%>" class="img-fluid w-80 borderbtm" style="max-height: 445px;" aria-label=" Image">
+      <div class=" d-flex justify-content-center align-items-end">
+        <form action="/edit" method="post" class="view-links ">
+          <button class="nav-link me-3" name="edit" value="<%=book.id%>">Edit</button>
+        </form>
+        <form action="/delete" method="post" class="view-links mt-4">
+          <button class="nav-link" name="id" value="<%=book.id%>">
+            Delete
+          </button>
+        </form>
+      </div>
+    </div>
+
+
+
+    <div class="col-md-8 align-items-center ">
+      <div class="borderbtm">
+        <h2 class=""> <%=book.title%> </h2>
+        <h6 class="text-body-secondary">✍ Author: <%=book.author%> </h6>
+        <h6 class="text-body-secondary">🗓️ Date: <%=book.note_date.toISOString().split('T')[0]%> </h6>
+        <h6 class="text-body-secondary">🌟 Rating: <%=book.rating%>/10 </h6>
+      </div>
+
+      <h6 class="text-body-primary mt-3"><%=book.notes%></h6>
+
+    </div>
+  </div>
+
+
+</div>
+
+
+<%- include ("partials/footer.ejs")%>
