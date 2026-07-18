@@ -21,11 +21,11 @@
       <div class="borderbtm">
         <h2 class=""> <%=book.title%> </h2>
         <h6 class="text-body-secondary">✍ Author: <%=book.author%> </h6>
-        <h6 class="text-body-secondary">🗓️ Date: <%=book.note_date.toISOString().split('T')[0]%> </h6>
+        <h6 class="text-body-secondary">🗓️ Date: <%=book.note_date.toLocaleDateString('en-CA')%> </h6>
         <h6 class="text-body-secondary">🌟 Rating: <%=book.rating%>/10 </h6>
       </div>
 
-      <h6 class="text-body-primary mt-3"><%=book.notes%></h6>
+      <h6 class="text-body-primary mt-3 secondary"><%=book.notes%></h6>
 
     </div>
   </div>
