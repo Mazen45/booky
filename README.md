@@ -5,7 +5,7 @@ Users can Add their notes from books they have read.
 
 ## About
 
-Booky uses [open library] (https://openlibrary.org/dev/docs/api/search) APIs to fetch books ISBNs and authors, then books covers,  based on the name of the book users enter, and displays them in a user-friendly way. The website allows users to add, update and delete books. It also allows them to sort books based on rating and date of last modification.
+Booky uses [openlibrary.org/dev/docs/api/search](https://openlibrary.org/dev/docs/api/search) APIs to fetch books ISBNs and authors, then books covers,  based on the name of the book users enter, and displays them in a user-friendly way. The website allows users to add, update and delete books. It also allows them to sort books based on rating and date of last modification.
 
 
 ## Tech Stack
